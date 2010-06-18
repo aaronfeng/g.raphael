@@ -105,6 +105,11 @@ Raphael.fn.g.piechart = function (cx, cy, r, values, opts) {
                     total: total,
                     label: that.labels && that.labels[j]
                 };
+                that.labels[j].mouseover(function () {
+                    fin.call(o);
+                }).mouseout(function () {
+                    fout.call(o);
+                });
                 cover.mouseover(function () {
                     fin.call(o);
                 }).mouseout(function () {
