@@ -1,9 +1,9 @@
-﻿/*
-* g.Raphael 0.4.1 - Charting library, based on Raphaël
-*
-* Copyright (c) 2009 Dmitry Baranovskiy (http://g.raphaeljs.com)
-* Licensed under the MIT (http://www.opensource.org/licenses/mit-license.php) license.
-*/
+/*
+ * g.Raphael 0.4.1 - Charting library, based on Raphaël
+ *
+ * Copyright (c) 2009 Dmitry Baranovskiy (http://g.raphaeljs.com)
+ * Licensed under the MIT (http://www.opensource.org/licenses/mit-license.php) license.
+ */
 Raphael.fn.g.piechart = function (cx, cy, r, values, opts) {
     opts = opts || {};
     var paper = this,
@@ -105,11 +105,6 @@ Raphael.fn.g.piechart = function (cx, cy, r, values, opts) {
                     total: total,
                     label: that.labels && that.labels[j]
                 };
-                that.labels[j].mouseover(function () {
-                    fin.call(o);
-                }).mouseout(function () {
-                    fout.call(o);
-                });
                 cover.mouseover(function () {
                     fin.call(o);
                 }).mouseout(function () {
